@@ -20,6 +20,6 @@ while(val!='2'):
     s.connect(('192.168.29.190', port))
     #192.168.29.190 is the address of my raspberrypi in my network
     #change it according to your setup
-    val = input()
-    s.send(bytes(val,encoding='utf8'))
+    val = str(input())
+    s.send(val)
     s.close()
