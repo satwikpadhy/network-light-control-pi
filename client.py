@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import socket
 import os
 val=0
@@ -20,6 +20,6 @@ while(val!='2'):
     s.connect(('192.168.29.190', port))
     #192.168.29.190 is the address of my raspberrypi in my network
     #change it according to your setup
-    val = str(input())
-    s.send(val)
+    val = input()
+    s.send( bytes(val, 'utf-8'))
     s.close()

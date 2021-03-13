@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import socket
 import RPi.GPIO as GPIO
 
@@ -20,7 +20,7 @@ while True:
     print ('Got request from', addr )
     data = c.recv(1024)
     print("Request :", data)
-    if(data == '1'):
+    if(data == b'1'):
         GPIO.output(8, GPIO.HIGH)
     else:
         GPIO.output(8, GPIO.LOW)
